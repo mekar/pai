@@ -21,13 +21,10 @@
     <td><%= property.description %></td>
     <td><%= property.dimensions %></td>
     <td><%= property.price %></td>
-    <td><%= link_to 'Show', property %></td>
-    <td><%= link_to 'Edit', edit_property_path(property) %></td>
-    <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Property', new_property_path %>
+<%= link_to 'New Property', new_independent_house_path  %>

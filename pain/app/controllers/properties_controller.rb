@@ -1,10 +1,10 @@
 class PropertiesController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :except => [:index]
 
   # GET /properties
   # GET /properties.json
   def index
-    @properties = Property.all
+    @properties = property_type.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -15,7 +15,7 @@ class PropertiesController < ApplicationController
   # GET /properties/1
   # GET /properties/1.json
   def show
-    @property = Property.find(params[:id])
+    @property = property_type.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -26,7 +26,7 @@ class PropertiesController < ApplicationController
   # GET /properties/new
   # GET /properties/new.json
   def new
-    @property = Property.new
+    @property = property_type.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -36,13 +36,13 @@ class PropertiesController < ApplicationController
 
   # GET /properties/1/edit
   def edit
-    @property = Property.find(params[:id])
+    @property = property_type.find(params[:id])
   end
 
   # POST /properties
   # POST /properties.json
   def create
-    @property = Property.new(params[:property])
+    @property = property_type.new(params[:property])
 
     respond_to do |format|
       if @property.save
@@ -58,7 +58,7 @@ class PropertiesController < ApplicationController
   # PUT /properties/1
   # PUT /properties/1.json
   def update
-    @property = Property.find(params[:id])
+    @property = property_type.find(params[:id])
 
     respond_to do |format|
       if @property.update_attributes(params[:property])
@@ -74,12 +74,18 @@ class PropertiesController < ApplicationController
   # DELETE /properties/1
   # DELETE /properties/1.json
   def destroy
-    @property = Property.find(params[:id])
+    @property = property_type.find(params[:id])
     @property.destroy
 
     respond_to do |format|
       format.html { redirect_to properties_url }
       format.json { head :no_content }
     end
+  end
+
+  private
+
+  def property_type
+    params[:type].constantize
   end
 end

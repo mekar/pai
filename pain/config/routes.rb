@@ -1,7 +1,7 @@
 Pain::Application.routes.draw do
   devise_for :users
 
-  resources :properties
+  resources :independent_houses, :controller => :properties, :type => 'IndependentHouse'
 
 
   # The priority is based upon order of creation:
