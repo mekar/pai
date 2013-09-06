@@ -1,5 +1,5 @@
-<h1>Listing properties</h1>
-
+<h1 class='aa'>Listing properties</h1>
+<%= paginate @properties %>
 <table>
   <tr>
     <th>Code</th>
@@ -8,11 +8,7 @@
     <th>Description</th>
     <th>Dimensions</th>
     <th>Price</th>
-    <th></th>
-    <th></th>
-    <th></th>
   </tr>
-
 <% @properties.each do |property| %>
   <tr>
     <td><%= property.code %></td>

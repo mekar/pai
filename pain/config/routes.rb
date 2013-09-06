@@ -1,8 +1,10 @@
 Pain::Application.routes.draw do
   devise_for :users
 
+  resources :properties, :controller => :properties, :type => 'Property'
+  resources :resdential, :controller => :properties, :type => 'Resdential'
   resources :independent_houses, :controller => :properties, :type => 'IndependentHouse'
-
+  resources :industrial_lands, :controller => :properties, :type => 'IndustrialLand'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

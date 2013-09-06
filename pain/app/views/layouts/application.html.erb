@@ -13,7 +13,7 @@
   	<!-- Set the viewport width to device width for mobile -->
   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+  	<title><%= content_for?(:title) ? yield(:title) : "PropertyAds.in" %></title>
 
   	<%= stylesheet_link_tag    "application" %>
   	<%= javascript_include_tag "vendor/custom.modernizr" %>
@@ -21,77 +21,78 @@
   </head>
 
   <body>
-	  <div class='header'>
-	    <div class='row' style='min-height:80px;max-width:100%'>
-	      <div class='logo large-3 columns'><%= image_tag('logo.png', :alt => 'Propertyads.in') %></div>
-	      <div class='top-links large-9 columns'>
-	        <div class='row'>
-	          <div class='small-10 columns'></div>
-			      <div class = 'small-2 columns'>
+    <div class='row'>
+		  <div class='header'>
+		    <div class='top-links'>
+		      <div class='logo'><%= image_tag('logo.png', :alt => 'Propertyads.in') %></div>
+		      <div class='links'>
+		        <span><%= link_to 'Register', new_user_registration_path %></span>
+		        <span class='sign-in'>
 			        <% if user_signed_in? %>
-			          <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
+			          <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
 			        <% else %>
-			          <%= link_to 'Login', new_user_session_path %>
+			          <%= link_to 'Sign in', new_user_session_path %>
 			        <% end %>
-
-		        </div>
+			      </span>
 		      </div>
-	      </div>
+			  </div>
+			  <div class='nav-menu'>
+				  <nav class="top-bar">
+					  <ul class="title-area">
+					    <li class="name"></li>
+					  </ul>
+					  <section class="top-bar-section">
+					    <ul class="left">
+					 <!--      <li class="divider"></li>
+					      <li class="has-dropdown"><a href="#">Residential</a>
+					        <ul>
+					          <li><a href="#">Independent House</a></li>
+					          <li><a href="#">Flats</a></li>
+					          <li><a href="#">Villas</a></li>
+					          <li><a href="#">Plots</a></li>
+					        </ul>
+					      </li>
+					      <li class="divider"></li>
+					      <li class="has-dropdown"><a href="#">Commercial</a>
+									<ul>
+										<li><a href="#">Show Rooms</a></li>
+										<li><a href="#">Office Spaces</a></li>
+										<li><a href="#">Resturants</a></li>
+										<li><a href="#">Industrial Lands</a></li>
+										<li><a href="#">Agricultural Lands</a></li>
+										<li><a href="#">Service Apartments</a></li>
+									</ul>
+					      </li>
+					      <li class="divider"></li> -->
+					      <li class="divider"></li>
+					      <li class="active"><a href="#">Home</a></li>
+					      <li class="divider"></li>
+					      <li class><a href="#">Flats</a></li>
+					      <li class="divider"></li>
+					      <li><a href="#">Houses</a></li>
+					      <li class="divider"></li>
+					      <li><a href="#">Villas</a></li>
+					      <li class="divider"></li>
+					      <li><a href="#">Plots</a></li>
+					      <li class="divider"></li>
+					      <li><a href="#">Office Space</a></li>
+					      <li class="divider"></li>
+					      <li><a href="#">Show room / Shop</a></li>
+					      <li class="divider"></li>
+					      <li><a href="#">Resturant / Hotel</a></li>
+					      <li class="divider"></li>
+					      <li><a href="#">Industrial Land</a></li>
+					      <li class="divider"></li>
+					      <li><a href="#">Agricultural Land</a></li>
+					      <li class="divider"></li>
+					      <li><a href="#">Resort / Service Apartments</a></li>
+					    </ul>
+				    </section>
+				  </nav>
+				</div>
 		  </div>
-		  <nav class="top-bar">
-			  <ul class="title-area">
-			    <li class="name"><h1><a href="#">Buy / Sell Property</a></h1>
-			    </li>
-			  </ul>
-			  <section class="top-bar-section">
-			    <ul class="left">
-			 <!--      <li class="divider"></li>
-			      <li class="has-dropdown"><a href="#">Residential</a>
-			        <ul>
-			          <li><a href="#">Independent House</a></li>
-			          <li><a href="#">Flats</a></li>
-			          <li><a href="#">Villas</a></li>
-			          <li><a href="#">Plots</a></li>
-			        </ul>
-			      </li>
-			      <li class="divider"></li>
-			      <li class="has-dropdown"><a href="#">Commercial</a>
-							<ul>
-								<li><a href="#">Show Rooms</a></li>
-								<li><a href="#">Office Spaces</a></li>
-								<li><a href="#">Resturants</a></li>
-								<li><a href="#">Industrial Lands</a></li>
-								<li><a href="#">Agricultural Lands</a></li>
-								<li><a href="#">Service Apartments</a></li>
-							</ul>
-			      </li>
-			      <li class="divider"></li> -->
-			      <li class="divider"></li>
-			      <li class="active"><a href="#">Flats</a></li>
-			      <li class="divider"></li>
-			      <li><a href="#">Houses</a></li>
-			      <li class="divider"></li>
-			      <li><a href="#">Villas</a></li>
-			      <li class="divider"></li>
-			      <li><a href="#">Plots</a></li>
-			      <li class="divider"></li>
-			      <li><a href="#">Office Space</a></li>
-			      <li class="divider"></li>
-			      <li><a href="#">Show room / Shop</a></li>
-			      <li class="divider"></li>
-			      <li><a href="#">Resturant / Hotel</a></li>
-			      <li class="divider"></li>
-			      <li><a href="#">Industrial Land</a></li>
-			      <li class="divider"></li>
-			      <li><a href="#">Agricultural Land</a></li>
-			      <li class="divider"></li>
-			      <li><a href="#">Resort / Service Apartments</a></li>
-			      <li class="divider"></li>
-			    </ul>
-		    </section>
-		  </nav>
+	    <%= yield %>
 	  </div>
-    <%= yield %>
     <%= javascript_include_tag "application" %>
   </body>
 </html>

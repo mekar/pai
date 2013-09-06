@@ -4,7 +4,7 @@ class PropertiesController < ApplicationController
   # GET /properties
   # GET /properties.json
   def index
-    @properties = property_type.all
+    @properties = property_type.page(params[:page]).per(5)
 
     respond_to do |format|
       format.html # index.html.erb
