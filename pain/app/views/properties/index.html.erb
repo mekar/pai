@@ -1,26 +1,28 @@
-<h1 class='aa'>Listing properties</h1>
+<%= link_to 'Sell Property', new_independent_house_path  %>
+<h1>Listing properties</h1>
+<div class='property-list'>
 <%= paginate @properties %>
-<table>
-  <tr>
-    <th>Code</th>
-    <th>Type</th>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Dimensions</th>
-    <th>Price</th>
-  </tr>
 <% @properties.each do |property| %>
-  <tr>
-    <td><%= property.code %></td>
-    <td><%= property.type %></td>
-    <td><%= property.title %></td>
-    <td><%= property.description %></td>
-    <td><%= property.dimensions %></td>
-    <td><%= property.price %></td>
-  </tr>
+  <div class='property-details clr'>
+    <div class='title'><%= property.title %></div>
+    <div class='p-image'>
+      <%= image_tag property.image.image.url(:thumb) %>
+    </div>
+    <div class='p-detail'>
+      <div class='desc'>
+        <span class='sf'>Description</span><br />
+        <span><%= property.description %></span>
+      </div>
+      <div>
+        <span class='sf'>Built-up Area</span>
+        <span><%= property.dimensions %></span>
+      </div>
+      <div>
+        <span class='sf'>Price</span>
+        <span><%= property.price %></span>
+      </div>
+    </div>
+  </div>
+  <div class='clr'></div>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Property', new_independent_house_path  %>
+</div>

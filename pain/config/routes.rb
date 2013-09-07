@@ -1,10 +1,24 @@
 Pain::Application.routes.draw do
+  get "pages/home"
+
+  get "pages/contact_us"
+
+  get "pages/about_us"
+
   devise_for :users
 
   resources :properties, :controller => :properties, :type => 'Property'
   resources :resdential, :controller => :properties, :type => 'Resdential'
   resources :independent_houses, :controller => :properties, :type => 'IndependentHouse'
+  resoures :flats, :controller => :properties, :type => 'Flat'
+  resources :villas, :controller => :properties, :type => 'Villa'
+  resources :plots, :controller => :properties, :types => 'Plot'
+  resources :commercial, :controller => :properties, :type => 'Commercial'
+  resources :office_spaces, :controller => :properties, :type => 'OfficeSpace'
+  resources :show_rooms, :controller => :properties, :type => 'ShowRoom'
   resources :industrial_lands, :controller => :properties, :type => 'IndustrialLand'
+  resources :hotels, :controller => :properties, :type => 'Hotel'
+  resources :agricultural_land, :controller => :properties, :type => 'AgriculturalLand'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -55,7 +69,7 @@ Pain::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'properties#index'
+  root :to => 'pages#home'
 
   # See how all your routes lay out with "rake routes"
 

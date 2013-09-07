@@ -5548,6 +5548,31 @@ table tfoot tr td {
 .f-dropdown.large {
   max-width: 800px;
 }
+
+/* line 17, ../../app/assets/stylesheets/application.scss */
+body {
+  background: url("/images/bg.gif") repeat scroll 0 0 #ece8dc;
+}
+
+/* line 20, ../../app/assets/stylesheets/application.scss */
+.row {
+  max-width: 100% !important;
+  padding-left: 10px !important;
+}
+/* Basic jQuery Slider essential styles */
+
+
+ul.bjqs{position:relative; list-style:none;padding:0;margin:0;overflow:hidden; display:none;}
+li.bjqs-slide{position:absolute; display:none;}
+ul.bjqs-controls{list-style:none;margin:0;padding:0;z-index:9999;}
+ul.bjqs-controls.v-centered li a{position:absolute;}
+ul.bjqs-controls.v-centered li.bjqs-next a{right:0;}
+ul.bjqs-controls.v-centered li.bjqs-prev a{left:0;}
+ol.bjqs-markers{list-style: none; padding: 0; margin: 0; width:100%;}
+ol.bjqs-markers.h-centered{text-align: center;}
+ol.bjqs-markers li{display:inline;}
+ol.bjqs-markers li a{display:inline-block;}
+p.bjqs-caption{display:block;width:96%;margin:0;padding:2%;position:absolute;bottom:0;}
 /* line 4, ../../../../.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.0.9/scss/foundation/components/_global.scss */
 *,
 *:before,
@@ -11087,10 +11112,10 @@ table tfoot tr td {
 }
 
 /* line 1014, ../../app/assets/stylesheets/foundation_and_overrides.scss */
-.row {
-  margin: 0 auto !important;
-  max-width: 100% !important;
-  width: 90% !important;
+.page {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 90%;
 }
 
 /* line 1020, ../../app/assets/stylesheets/foundation_and_overrides.scss */
@@ -11124,9 +11149,67 @@ table tfoot tr td {
   clear: both;
   padding-top: 5px;
 }
-/* line 4, ../../app/assets/stylesheets/properties.css.scss */
-.aa {
-  color: green;
+
+/* line 1044, ../../app/assets/stylesheets/foundation_and_overrides.scss */
+a:hover a:focus {
+  text-decoration: none;
+}
+
+/*
+button, .button {
+    background-color: #6B6B60 !important;
+    box-shadow: 0 6px 6px -6px #333333;
+    border-color: #6B6B6B !important
+}
+
+button:hover, button:focus, .button:hover, .button:focus {
+    background-color: #6B6B6B !important;
+    box-shadow: 0 6px 6px -6px #333333;
+    border-color: #6B6B6B !important    
+}
+
+.top-bar,.top-bar-section ul li > a{
+	background: none repeat scroll 0 0 #6B6B60 !important;
+}
+
+.top-bar-section .divider{
+    border-bottom: 1px solid #6B6B00;
+    border-top: 1px solid #6B6B6C;
+}
+
+.top-bar-section > ul > .divider{
+	border-color: #D3D3D3 !important;
+	border-style: none outset;
+}
+*/
+/* line 5, ../../app/assets/stylesheets/properties.css.scss */
+.property-list .clr {
+  clear: both;
+}
+/* line 8, ../../app/assets/stylesheets/properties.css.scss */
+.property-list .property-details {
+  float: left;
+  border: 1px solid #D7D7D5;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 0 0 5px 1px #DFDFDF;
+  margin: 0 0 20px;
+  padding: 10px;
+}
+/* line 15, ../../app/assets/stylesheets/properties.css.scss */
+.property-list .property-details .title {
+  font-size: 16px !important;
+  font-style: bold !important;
+  padding: 5px 0 10px 0;
+}
+/* line 20, ../../app/assets/stylesheets/properties.css.scss */
+.property-list .property-details .p-image {
+  float: left;
+  width: 300px;
+}
+/* line 24, ../../app/assets/stylesheets/properties.css.scss */
+.property-list .property-details .p-detail {
+  float: left;
+  width: 800px;
 }
 /* line 1, ../../app/assets/stylesheets/scaffolds.css.scss */
 body {
@@ -11208,8 +11291,17 @@ div.field, div.actions {
   list-style: square;
 }
 /* line 2, ../../app/assets/stylesheets/users-sessions.css.scss */
-#sign-in .h2 {
-  color: red;
+#sign-in .inline-block {
+  display: inline-block;
+}
+/* line 5, ../../app/assets/stylesheets/users-sessions.css.scss */
+#sign-in .remember-password {
+  padding-bottom: 2px;
+}
+
+/* line 11, ../../app/assets/stylesheets/users-sessions.css.scss */
+#sign-in label, #sign-out label {
+  font-weight: bold;
 }
 /* line 4, ../../../../.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.0.9/scss/foundation/components/_global.scss */
 *,

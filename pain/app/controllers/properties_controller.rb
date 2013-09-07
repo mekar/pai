@@ -27,7 +27,8 @@ class PropertiesController < ApplicationController
   # GET /properties/new.json
   def new
     @property = property_type.new
-
+    @property.build_address
+    @property.build_image
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @property }
@@ -42,7 +43,7 @@ class PropertiesController < ApplicationController
   # POST /properties
   # POST /properties.json
   def create
-    @property = property_type.new(params[:property])
+    @property = property_type.new(params[property_params])
 
     respond_to do |format|
       if @property.save
@@ -61,7 +62,7 @@ class PropertiesController < ApplicationController
     @property = property_type.find(params[:id])
 
     respond_to do |format|
-      if @property.update_attributes(params[:property])
+      if @property.update_attributes(params[property_params])
         format.html { redirect_to @property, notice: 'Property was successfully updated.' }
         format.json { head :no_content }
       else
@@ -87,5 +88,9 @@ class PropertiesController < ApplicationController
 
   def property_type
     params[:type].constantize
+  end
+  
+  def property_params
+    params[:type].underscore.to_sym
   end
 end
