@@ -11152,7 +11152,9 @@ table tfoot tr td {
 
 /* line 1044, ../../app/assets/stylesheets/foundation_and_overrides.scss */
 a:hover a:focus {
-  text-decoration: none;
+  text-decoration: underline !important;
+  color: #000000 !important;
+  background-color: none !important;
 }
 
 /*
@@ -11165,7 +11167,7 @@ button, .button {
 button:hover, button:focus, .button:hover, .button:focus {
     background-color: #6B6B6B !important;
     box-shadow: 0 6px 6px -6px #333333;
-    border-color: #6B6B6B !important    
+    border-color: #6B6B6B !important
 }
 
 .top-bar,.top-bar-section ul li > a{
@@ -11197,8 +11199,8 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 /* line 15, ../../app/assets/stylesheets/properties.css.scss */
 .property-list .property-details .title {
-  font-size: 16px !important;
-  font-style: bold !important;
+  font-size: 16px;
+  font-weight: bold;
   padding: 5px 0 10px 0;
 }
 /* line 20, ../../app/assets/stylesheets/properties.css.scss */

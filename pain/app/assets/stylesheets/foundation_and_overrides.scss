@@ -1014,7 +1014,7 @@
 .page{
   margin: 0 auto;
   max-width:100%;
-  width: 90%;
+  width: 89%;
 }
 
 .top-links{
@@ -1041,8 +1041,24 @@
   clear:both;
   padding-top:5px;
 }
-a:hover a:focus{
-  text-decoration:none;
+a:hover, a:focus{
+  text-decoration:underline !important;
+  color: #000000 !important;
+  background-color: white !important;
+}
+.top-bar-section li a:not(.button) {
+	color: #ffffff !important;
+    background: none repeat scroll 0 0 #111111 !important;
+    line-height: 45px;
+    padding: 0 15px;
+}
+.top-bar-section li a:not(.button):hover {
+    background: none repeat scroll 0 0 #000000 !important;
+    text-decoration: none !important;
+}
+
+.top-bar-section li a:not(.button):focus {
+    text-decoration: none !important;
 }
 /*
 button, .button {
@@ -1054,7 +1070,7 @@ button, .button {
 button:hover, button:focus, .button:hover, .button:focus {
     background-color: #6B6B6B !important;
     box-shadow: 0 6px 6px -6px #333333;
-    border-color: #6B6B6B !important    
+    border-color: #6B6B6B !important
 }
 
 .top-bar,.top-bar-section ul li > a{

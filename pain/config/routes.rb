@@ -10,7 +10,7 @@ Pain::Application.routes.draw do
   resources :properties, :controller => :properties, :type => 'Property'
   resources :resdential, :controller => :properties, :type => 'Resdential'
   resources :independent_houses, :controller => :properties, :type => 'IndependentHouse'
-  resoures :flats, :controller => :properties, :type => 'Flat'
+  resources :apartments, :controller => :properties, :type => 'Apartment'
   resources :villas, :controller => :properties, :type => 'Villa'
   resources :plots, :controller => :properties, :types => 'Plot'
   resources :commercial, :controller => :properties, :type => 'Commercial'

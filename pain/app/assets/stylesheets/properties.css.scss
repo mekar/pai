@@ -10,7 +10,7 @@
     border: 1px solid #D7D7D5;
     border-radius: 5px 5px 5px 5px;
     box-shadow: 0 0 5px 1px #DFDFDF;
-    margin: 0 0 20px;
+    margin: 0 0 15px;
     padding: 10px;
     .title{
       font-size:16px;
@@ -24,6 +24,12 @@
     .p-detail{
       float:left;
       width:800px;
+      .desc{
+        height:110px;
+        overflow: hidden;
+        white-space: word-break;
+        text-overflow: ellipsis;
+      }
     }
 	}
 }

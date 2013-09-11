@@ -1,6 +1,6 @@
 class PropertiesController < ApplicationController
   before_filter :authenticate_user!, :except => [:index]
-
+  before_filter :set_current_user
   # GET /properties
   # GET /properties.json
   def index
