@@ -6,6 +6,7 @@ class Property < ActiveRecord::Base
   accepts_nested_attributes_for :address
   accepts_nested_attributes_for :image
   before_create :assign_user
+  acts_as_taggable_on :amenities
 
   private
     def assign_user
