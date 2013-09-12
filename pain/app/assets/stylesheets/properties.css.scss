@@ -25,10 +25,8 @@
       float:left;
       width:800px;
       .desc{
-        height:110px;
-        overflow: hidden;
-        white-space: word-break;
-        text-overflow: ellipsis;
+        padding-bottom:15px;
+        line-height:18px;
       }
     }
 	}

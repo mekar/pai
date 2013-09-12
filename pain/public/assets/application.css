@@ -5559,6 +5559,21 @@ body {
   max-width: 100% !important;
   padding-left: 10px !important;
 }
+
+/* line 24, ../../app/assets/stylesheets/application.scss */
+.fwb {
+  font-weight: bold;
+}
+
+/* line 27, ../../app/assets/stylesheets/application.scss */
+.pb5 {
+  padding-bottom: 5px;
+}
+
+/* line 30, ../../app/assets/stylesheets/application.scss */
+.pb10 {
+  padding-bottom: 10px;
+}
 /* Basic jQuery Slider essential styles */
 
 
@@ -11115,7 +11130,7 @@ table tfoot tr td {
 .page {
   margin: 0 auto;
   max-width: 100%;
-  width: 90%;
+  width: 85%;
 }
 
 /* line 1020, ../../app/assets/stylesheets/foundation_and_overrides.scss */
@@ -11150,11 +11165,35 @@ table tfoot tr td {
   padding-top: 5px;
 }
 
-/* line 1044, ../../app/assets/stylesheets/foundation_and_overrides.scss */
-a:hover a:focus {
+/* line 1045, ../../app/assets/stylesheets/foundation_and_overrides.scss */
+a:hover:not(.button), a:focus:not(.button) {
   text-decoration: underline !important;
   color: #000000 !important;
-  background-color: none !important;
+  background-color: white !important;
+}
+
+/* line 1051, ../../app/assets/stylesheets/foundation_and_overrides.scss */
+a.button {
+  color: #ffffff !important;
+}
+
+/* line 1055, ../../app/assets/stylesheets/foundation_and_overrides.scss */
+.top-bar-section li a:not(.button) {
+  color: #ffffff !important;
+  background: none repeat scroll 0 0 #111111 !important;
+  line-height: 45px;
+  padding: 0 15px;
+}
+
+/* line 1061, ../../app/assets/stylesheets/foundation_and_overrides.scss */
+.top-bar-section li a:not(.button):hover {
+  background: none repeat scroll 0 0 #000000 !important;
+  text-decoration: none !important;
+}
+
+/* line 1066, ../../app/assets/stylesheets/foundation_and_overrides.scss */
+.top-bar-section li a:not(.button):focus {
+  text-decoration: none !important;
 }
 
 /*
@@ -11194,7 +11233,7 @@ button:hover, button:focus, .button:hover, .button:focus {
   border: 1px solid #D7D7D5;
   border-radius: 5px 5px 5px 5px;
   box-shadow: 0 0 5px 1px #DFDFDF;
-  margin: 0 0 20px;
+  margin: 0 0 15px;
   padding: 10px;
 }
 /* line 15, ../../app/assets/stylesheets/properties.css.scss */
@@ -11212,6 +11251,11 @@ button:hover, button:focus, .button:hover, .button:focus {
 .property-list .property-details .p-detail {
   float: left;
   width: 800px;
+}
+/* line 27, ../../app/assets/stylesheets/properties.css.scss */
+.property-list .property-details .p-detail .desc {
+  padding-bottom: 15px;
+  line-height: 18px;
 }
 /* line 1, ../../app/assets/stylesheets/scaffolds.css.scss */
 body {

@@ -1014,7 +1014,7 @@
 .page{
   margin: 0 auto;
   max-width:100%;
-  width: 89%;
+  width: 85%;
 }
 
 .top-links{
@@ -1041,11 +1041,17 @@
   clear:both;
   padding-top:5px;
 }
-a:hover, a:focus{
+
+a:hover:not(.button), a:focus:not(.button){
   text-decoration:underline !important;
   color: #000000 !important;
   background-color: white !important;
 }
+
+a.button{
+	color:#ffffff !important;
+}
+
 .top-bar-section li a:not(.button) {
 	color: #ffffff !important;
     background: none repeat scroll 0 0 #111111 !important;
